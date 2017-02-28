@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    // Display message indicating if the student got 5 out of 6 answers right.
+
+    function isCorrectAnswer(correctAnswer, otherAnswer) {
+        return otherAnswer === correctAnswer;
+    }
+
+    function isPassingMark(numCorrect) {
+        var passingMark = 5;
+        return numCorrect >= passingMark;
+    }
+
+    var answerKey = [7, 2, "five", 8, "Beefalo", false];
+    var studentAnswers = [7, 2, 5, 8, "Buffalo", true];
+    var numCorrect = 0;
+
+    for (var questionNum = 0; questionNum < studentAnswers.length; questionNum++) {
+        if (isCorrectAnswer(answerKey[questionNum], studentAnswers[questionNum])) {
+            numCorrect++;
+        }
+    }
+
+    if (isPassingMark(numCorrect)) {
+        console.log("You have passed!");
+    } else {
+        console.log('You have failed. Better luck next time.');
+    }
+</script>
