@@ -12,8 +12,19 @@
         var nameArray = '0123456';
 
         function printStringForward() {
+            var loopsCounter = 0;
+            var loopsLimiter = 2;
+
             for (var i = 0; i < nameArray.length; i++) {
                 console.log(nameArray[i]);
+
+                if (nameArray.length - 1 === i) {
+                    loopsCounter++;
+
+                    if (loopsCounter < loopsLimiter) {
+                        i = -1;
+                    }
+                }
             }
         }
 
