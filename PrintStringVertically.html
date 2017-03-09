@@ -8,19 +8,23 @@
 
 <body>
     <script>
-        var nameArray = ['H', 'E', 'L', 'L', 'O', '', 'W', 'O', 'R', 'L', 'D'];
+        //  var nameArray = ['','H', 'E', 'L', 'L', 'O', '', 'W', 'O', 'R', 'L', 'D', ''];
+        var nameArray = '0123456';
 
         function printStringForward() {
-            while (var i = nameArray[0]; i = < 10; i++;) {
-                console.log(nameArray.length);
+            for (var i = 0; i < nameArray.length; i++) {
+                console.log(nameArray[i]);
             }
         }
 
         function printStringBackward() {
-            while (var i = nameArray[10]; i = > 0; i--;) {
-                console.log(nameArray.length);
+            for (var i = nameArray.length - 1; i >= 0; i--) {
+                console.log(nameArray[i]);
             }
         }
+        printStringForward();
+        console.log('');
+        printStringBackward();
     </script>
 </body>
 
