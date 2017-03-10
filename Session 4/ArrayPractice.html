@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+</head>
+
+<body>
+    <script>
+     var meats = ['chicken', 'sausage', 'pepperoni'];
+     var veggies = ['mushrooms', 'peppers', 'onions', 'peppers', 'carrots'];
+
+     console.log('Concatenation: ' + meats.concat(veggies));
+     console.log('IndexOf: ' + veggies.indexOf('peppers'));
+     console.log('Join: ' + meats.join(' | '));
+     console.log('Last IndexOf: ' + veggies.lastIndexOf('peppers'));
+     console.log('Reverse: ' + meats.reverse());
+     console.log('Slice: ' + veggies.slice(0, 4));
+     console.log('Sort: ' + meats.sort());
+     console.log('ToString: ' + veggies.toString());
+     console.log('ValueOf: ' + meats.valueOf());
+     // Push and Pop are most commonly used or most popular
+     // Push and Pop deal with end of the Array
+     //Shift and unshift deal with the beginning of the Array
+     console.log('Push: ' + veggies.push('jalapenos')+' '+ veggies.toString());
+     console.log('Pop: ' + veggies.pop()+' '+ veggies.toString());
+     console.log('Unshift: ' + meats.unshift('beef')+' '+ meats.toString());
+     console.log('Shift: ' + meats.shift()+' '+ meats.toString());
+    </script>
+</body>
+
+</html>
