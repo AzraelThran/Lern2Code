@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+    <div class='numerals'>
+        <button id='button1' value='1'>1</button>
+        <button id='button2' value='2'>2</button>
+        <button id='button3' value='3'>3</button>
+        <button id='button4' value='4'>4</button>
+        <button id='button5' value='5'>5</button>
+        <button id='button6' value='6'>6</button>
+        <button id='button7' value='7'>7</button>
+        <button id='button8' value='8'>8</button>
+        <button id='button9' value='9'>9</button>
+        <button id='button0' value='0'>0</button>
+    </div>
+    <div class='operators'>
+        <button id='plus' value='+'>+</button>
+        <button id='minus' value='-'>-</button>
+        <button id='multiply' value='*'>X</button>
+        <button id='divide' value='/'>/</button>
+        <button id='equals' value='='>=</button>
+    </div>
+</body>
+
+</html>
+
+<script>
+    document.addEventListener("DOMContentLoaded", initialize);
+
+    function initialize() {
+        console.log("DOM fully loaded and parsed");
+        for (var i = 0; i < 10; i++) {
+            var button = document.getElementById('button' + i);
+            if (button) {
+                button.addEventListener('click', buttonClick);
+            }
+        }
+        var operators = document.querySelectorAll('div.operators button');
+        if (operators && operators.length > 0) {
+            for (var i = 0; i < operators.length; i++) {
+                var button = operators[i];
+                if (button) {
+                    button.addEventListener('click', operatorClick);
+                }
+            }
+        }
+    }
+
+    function buttonClick(event) {
+        var value = parseInt(event.srcElement.value, 10);
+        console.log(value);
+    }
+
+    function operatorClick(event) {
+        var value = event.srcElement.value;
+        console.log(value);
+    }
+</script>
